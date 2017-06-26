@@ -2,7 +2,7 @@
 
 <h1>Songs</h1>
 
-<table>
+<table class="table table-striped table-bordered table-hover table-condensed active">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,11 +14,11 @@
   <tbody>
     <% @songs.each do |song| %>
       <tr>
-        <td><%= song.name %></td>
-        <td><%= song.artist %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><div class="btn btn-default btn-success"><%= song.name %></div></td>
+        <td><div class="btn btn-default btn-warning"><%= song.artist %></div></td>
+        <td><div class="btn btn-default btn-danger"><%= link_to 'Show', song %></div></td>
+        <td><div class="btn btn-default btn-default"><%= link_to 'Edit', edit_song_path(song) %></div></td>
+        <td><div class="btn btn-default btn-info"><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
       </tr>
     <% end %>
   </tbody>
