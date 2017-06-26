@@ -16,9 +16,9 @@
       <tr>
         <td><%= artist.name %></td>
         <td><%= artist.genre.name %></td>
-        <td><div class="btn btn-default btn-success"><%= link_to 'Show', artist %></div></td>
-        <td><div class="btn btn-default btn-warning"><%= link_to 'Edit', edit_artist_path(artist) %></div></td>
-        <td><div class="btn btn-default btn-danger"><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
+        <td><div class="btn btn-default btn-success"><%= link_to fa_icon('eye', text: 'Show'), artist %></div></td>
+        <td><div class="btn btn-default btn-warning"><%= link_to fa_icon('pencil', text: 'Edit'), edit_artist_path(artist) %></div></td>
+        <td><div class="btn btn-default btn-danger"><%= link_to fa_icon('trash-o'), artist, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
       </tr>
     <% end %>
   </tbody>
